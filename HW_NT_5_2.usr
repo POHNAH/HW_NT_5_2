@@ -1,7 +1,7 @@
 [General]
 Type=Multi
 DefaultCfg=default.cfg
-ParameterFile=
+ParameterFile=HW_NT_5_2.prm
 GlobalParameterFile=
 NewFunctionHeader=1
 RunType=cci
@@ -17,14 +17,16 @@ LastModifyVer=12.60.0.971
 ParamLeftBrace={
 ParamRightBrace=}
 ScriptLanguage=C
-LastCodeGenerationVer=
+LastCodeGenerationVer=12.60.0.971
 DisableRegenerate=0
-Encoding=
+Encoding=ANSI
 Description=
 ScriptLocale=ru-RU
 [Actions]
 vuser_init=vuser_init.c
-Action=Action.c
+logic=logic.c
+createTicket=createTicket.c
+checkAndDel=checkAndDel.c
 vuser_end=vuser_end.c
 [RunLogicFiles]
 Default Profile=default.usp
@@ -35,25 +37,33 @@ Default Profile=default.cfg
 [ExtraFiles]
 globals.h=
 [Modified Actions]
-vuser_init=0
-Action=0
-vuser_end=0
+vuser_init=1
+logic=1
+createTicket=1
+checkAndDel=1
+vuser_end=1
 [Recorded Actions]
 vuser_init=0
-Action=0
+logic=0
+createTicket=0
+checkAndDel=1
 vuser_end=0
 [Replayed Actions]
-vuser_init=0
-Action=0
-vuser_end=0
+vuser_init=1
+logic=1
+createTicket=1
+checkAndDel=1
+vuser_end=1
 [Interpreters]
 vuser_init=cci
-Action=cci
+logic=cci
+createTicket=cci
+checkAndDel=cci
 vuser_end=cci
 [TransactionsOrder]
 Order=
 [StateManagement]
-LastReplayStatus=0
+LastReplayStatus=1
 [ActiveReplay]
-LastReplayedRunName=
-ActiveRunName=
+LastReplayedRunName=result1
+ActiveRunName=result1
